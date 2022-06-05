@@ -1,28 +1,35 @@
 * {
     box-sizing: border-box;
   }
+
+ :root{
+    --primary: #00606e;
+    --secondary: #24e2ff;
+    --tertiary: #023037;
+    --input: #ccc;
+ } 
   
   body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: var(--tertiary);
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: var(--primary);
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: var(--secondary);
   }
   
   button {
-    background-color: #225ca3;
+    background-color: var(--primary);
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +40,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: var(--secondary);
   }
   
   .post-list {
@@ -44,19 +51,31 @@
   textarea, input {
     padding: .5%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input);
   }
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid var(--secondary);
   }
   
   textarea {
     min-width: 40%;
     min-height: 100px;
   }
-  
+
+  .top {
+    padding: 2.5%;
+    margin-bottom: 0;
+  }
+
+  .main {
+    width:100%;
+    size: 15vw;
+    align-items: center;
+    padding-top: 3%;
+}
+
   form > div {
     margin-bottom: 2%;
   }
@@ -75,9 +94,9 @@
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--input);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 1%;
   }
@@ -97,7 +116,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: var(--primary);
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -106,7 +125,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: var(--secondary);
   }
   
   .delete-post-btn {
@@ -122,24 +141,26 @@
     line-height: 150%;
   }
   
-  .post .title span {
+  .post span {
     font-style: italic;
     font-size: 90%;
     color: #7d7d7d;
+  }
+
+  .title {
+    background-color: var(--secondary);
+    font-style: italic;
+    font-size: 125%;
+    color: var(--tertiary);
+  }
+
+  .title:hover {
+    color: var(--primary);
   }
   
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
   }
   
   .comment-form {
@@ -170,7 +191,7 @@
   }
   
   footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--input);
     display: flex;
     justify-content: center;
     padding: 1%;
