@@ -3,8 +3,8 @@
   }
 
  :root{
-    --primary: #00606e;
-    --secondary: #24e2ff;
+    --primary: #04798b;
+    --secondary: #07c7ce;
     --tertiary: #023037;
     --input: #ccc;
  } 
@@ -14,7 +14,7 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: var(--tertiary);
+    background-color: rgb(183, 217, 228);
   }
   
   a {
@@ -25,7 +25,7 @@
   }
   
   a:hover {
-    color: var(--secondary);
+    color: var(--tertiary);
   }
   
   button {
@@ -41,6 +41,10 @@
   
   button:hover {
     background-color: var(--secondary);
+  }
+
+  .card-text {
+    color: var(--tertiary);
   }
   
   .post-list {
@@ -125,7 +129,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: var(--secondary);
+    color: var(--tertiary);
   }
   
   .delete-post-btn {
@@ -139,6 +143,8 @@
   .post {
     margin-bottom: 2%;
     line-height: 150%;
+    border-color: var(--tertiary);
+    border-width: 3px;
   }
   
   .post span {
@@ -149,9 +155,11 @@
 
   .title {
     background-color: var(--secondary);
-    font-style: italic;
-    font-size: 125%;
+    font-weight: bolder;
+    font-size: 150%;
     color: var(--tertiary);
+    height: 3vw;
+    padding-top: .375rem;
   }
 
   .title:hover {
