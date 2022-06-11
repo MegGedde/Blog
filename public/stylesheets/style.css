@@ -42,10 +42,6 @@
   button:hover {
     background-color: var(--secondary);
   }
-
-  .card-text {
-    color: var(--tertiary);
-  }
   
   .post-list {
     margin: 0;
